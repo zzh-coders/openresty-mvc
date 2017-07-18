@@ -5,13 +5,15 @@
 -- Time: 下午 2:38
 -- To change this template use File | Settings | File Templates.
 --
-local _usermodel = {}
-local model = require("model.model"):new("db_test"):connect()
-
-
-
-_usermodel.addUser = function(name)
-    return model:insert({ name = name, create_at = get_now_date(), update_at = get_now_date() })
+local modelBase = require("model.model")
+local _M = {}
+function _M.new()
+    local model = modelBase:new("user"):connect()
+    return setmetatable({ model = model }, { __index = model })
 end
 
-return _usermodel
+function _M.addUser(self, name)
+    return self.model:insert({ name = name, created_at = get_now_date(), update_at = get_now_date() })
+end
+
+return _M

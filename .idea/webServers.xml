@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d7b49978-ed07-4017-b012-10bc66906ad5" name="192.168.50.130" url="http://192.168.50.130">
+        <fileTransfer host="192.168.50.130" port="22" rootFolder="/data/lua_code/project" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
