@@ -1,9 +1,12 @@
 local _config = {}
-
+_config.app = {
+    debug = true,
+    controllerName = "controller"
+}
 _config.db = {
-    host = '192.168.50.128',
+    host = '192.168.50.129',
     port = 3306,
-    database = 'test',
+    database = 'db_test',
     user = 'root',
     password = '123456'
 }
